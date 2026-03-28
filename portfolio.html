@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f8f6f3;
+  color: #2d2020;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px; /* reduced */
+}
+
+.hero h1 {
+  font-family: 'Playfair Display';
+  font-size: 44px;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 24px;
+  border-radius: 25px;
+  background: #9b6b6b;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #7d5252;
+}
+
+/* SECTION */
+.section {
+  padding: 50px 8%; /* reduced */
+}
+
+.section h2 {
+  text-align: center;
+  font-family: 'Playfair Display';
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* CATEGORY */
+.category {
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.package {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.4s ease;
+
+}
+
+.package:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+/* IMAGE */
+.package img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  object-position: 0% 70%; 
+  transition: transform 0.4s ease;
+
+}
+
+/* CONTENT */
+.package-content {
+  padding: 18px;
+  text-align: center;
+}
+
+.package-content h3 {
+  font-family: 'Playfair Display';
+  font-size: 20px;
+}
+
+.package-content p {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* BUTTON */
+.package-content a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: 1px solid #9b6b6b;
+  color: #9b6b6b;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.package-content a:hover {
+  background: #9b6b6b;
+  color: white;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  font-family: 'Playfair Display';
+  font-size: 26px;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 12px;
+  background: #9b6b6b;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1 {
+    font-size: 30px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>I design websites that make your business look premium</h1>
+  <p>Helping small businesses attract customers and grow</p>
+  <a href="https://wa.me/918369021400" class="hero-btn">
+    Contact on WhatsApp
+  </a>
+</section>
+
+<!-- JEWELLERY FIRST -->
+<section class="section category">
+  <h2>Jewellery Websites</h2>
+
+  <div class="packages">
+
+    <div class="package">
+      <img src="https://i.pinimg.com/236x/58/bf/ee/58bfeee0c5310aa78d7122e6b855a597.jpg">
+      <div class="package-content">
+        <h3>Starter Website</h3>
+        <p>Clean product showcase design</p>
+        <a href="https://jewellery-starter.vercel.app/">View Website</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://www.ainwear.in/cdn/shop/files/8A388FBE-1600-4F49-A416-291C08CD5AE8.jpg">
+      <div class="package-content">
+        <h3>Business Website</h3>
+        <p>Better layout with collections</p>
+        <a href="https://jewellery-business.vercel.app/">View Website</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638">
+      <div class="package-content">
+        <h3>Premium Website</h3>
+        <p>Luxury feel with advanced design</p>
+        <a href="https://jewellery-premium.vercel.app/">View Website</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SALON -->
+<section class="section category">
+  <h2>Salon Websites</h2>
+
+  <div class="packages">
+
+    <div class="package">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+      <div class="package-content">
+        <h3>Starter Website</h3>
+        <p>Simple and clean online presence</p>
+        <a href="https://salon-starter.vercel.app/">View Website</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948">
+      <div class="package-content">
+        <h3>Business Website</h3>
+        <p>Structured design with services & gallery</p>
+        <a href="https://salon-business-website.vercel.app/">View Website</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+      <div class="package-content">
+        <h3>Premium Website</h3>
+        <p>Modern and high-end user experience</p>
+        <a href="https://salon-premium-luxury.vercel.app/">View Website</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Want a website like this?</h2>
+  <a href="https://wa.me/918369021400">Contact on WhatsApp</a>
+</section>
+
+</body>
+</html>
