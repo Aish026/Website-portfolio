@@ -3,261 +3,609 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+<title>Aishwarya — Business Websites, Kharghar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
 <style>
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f8f6f3;
-  color: #2d2020;
+:root {
+  --bg:#f7f3ee; --bg2:#f0ebe3; --ink:#1a1208;
+  --accent:#8c5c4a; --accent2:#b8897a; --accent3:#d4b5a8;
+  --sand:#e8ddd4; --muted:#7a6a5e; --white:#fdfaf6;
 }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font-weight:300;overflow-x:hidden;}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(253,250,246,0.97);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(140,92,74,0.1);
+  padding:0 52px;height:66px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--ink);text-decoration:none;font-weight:400;letter-spacing:0.04em;}
+.nav-logo em{font-style:italic;color:var(--accent);}
+.nav-right{display:flex;align-items:center;gap:28px;}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.25s;}
+.nav-links a:hover{color:var(--accent);}
+.nav-cta{background:var(--accent);color:#fff;padding:9px 22px;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;transition:background 0.25s;}
+.nav-cta:hover{background:var(--ink);}
 
 /* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px 40px; /* reduced */
+.hero{text-align:center;padding:96px 24px 76px;position:relative;overflow:hidden;}
+.hero::after{
+  content:'';position:absolute;bottom:-120px;left:50%;transform:translateX(-50%);
+  width:800px;height:800px;border-radius:50%;
+  background:radial-gradient(circle,rgba(140,92,74,0.06) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);
+  margin-bottom:20px;
+}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:24px;height:1px;background:var(--accent);opacity:0.5;}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,5vw,4rem);
+  font-weight:300;line-height:1.1;
+  max-width:700px;margin:0 auto 16px;color:var(--ink);
+}
+.hero h1 em{font-style:italic;color:var(--accent);}
+.hero-sub{font-size:0.9rem;color:var(--muted);max-width:500px;margin:0 auto 10px;line-height:1.85;}
+.hero-intro{
+  font-size:0.85rem;color:var(--muted);margin-bottom:36px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.hero-intro strong{color:var(--ink);font-weight:500;}
+.hero-intro-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);opacity:0.5;}
+
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:var(--accent);color:#fff;padding:13px 34px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;transition:background 0.25s,transform 0.2s;display:inline-block;}
+.btn-primary:hover{background:var(--ink);transform:translateY(-2px);}
+.btn-secondary{border:1.5px solid var(--accent);color:var(--accent);padding:12px 30px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;transition:all 0.25s;display:inline-block;}
+.btn-secondary:hover{background:var(--accent);color:#fff;}
+
+/* TRUST */
+.trust{background:var(--ink);padding:15px 52px;display:flex;justify-content:center;gap:36px;flex-wrap:wrap;}
+.ti{display:flex;align-items:center;gap:8px;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(253,250,246,0.38);}
+.ti::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+
+/* SECTIONS */
+.section{padding:88px 52px;}
+.section-light{background:var(--white);}
+.section-bg{background:var(--bg2);}
+
+.sec-hd{text-align:center;margin-bottom:56px;}
+.sec-eyebrow{font-size:0.58rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:10px;}
+.sec-eyebrow::before,.sec-eyebrow::after{content:'';flex:1;max-width:28px;height:1px;background:var(--accent);opacity:0.4;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--ink);}
+.sec-title em{font-style:italic;color:var(--accent);}
+.sec-sub{font-size:0.84rem;color:var(--muted);margin-top:10px;line-height:1.7;}
+
+/* NICHE BLOCK */
+.niche-block{margin-bottom:72px;}
+.niche-block:last-child{margin-bottom:0;}
+.niche-label{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:24px;padding-bottom:16px;
+  border-bottom:1px solid var(--sand);
+}
+.niche-label-left{display:flex;align-items:center;gap:14px;}
+.niche-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--ink);}
+.niche-count{font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);background:rgba(140,92,74,0.08);padding:4px 12px;}
+.niche-from{font-size:0.72rem;color:var(--muted);}
+.niche-from strong{color:var(--accent);font-weight:500;}
+
+/* DEMO CARDS */
+.demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.demo-card{
+  background:var(--white);
+  overflow:hidden;position:relative;
+  border:1px solid var(--sand);
+  transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94),box-shadow 0.4s,border-color 0.3s;
+}
+.demo-card:hover{transform:translateY(-8px);box-shadow:0 24px 52px rgba(26,18,8,0.1);border-color:var(--accent3);}
+
+/* PREVIEW AREA */
+.demo-preview{
+  height:200px;overflow:hidden;position:relative;
+}
+.demo-preview img{
+  width:100%;height:100%;object-fit:cover;
+  object-position:center center;
+  transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+  display:block;
+}
+.demo-card:hover .demo-preview img{transform:scale(1.06);}
+.demo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,transparent 50%,rgba(26,18,8,0.5));
+  opacity:0;transition:opacity 0.35s;
+  display:flex;align-items:flex-end;justify-content:center;padding-bottom:20px;
+}
+.demo-card:hover .demo-overlay{opacity:1;}
+.demo-overlay-btn{
+  background:#fff;color:var(--ink);
+  padding:8px 20px;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;
+  text-decoration:none;font-weight:500;
+  transition:background 0.25s;
+}
+.demo-overlay-btn:hover{background:var(--accent);color:#fff;}
+
+.demo-body{padding:20px 22px 22px;}
+.demo-tier{font-size:0.55rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.demo-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--ink);margin-bottom:8px;}
+.demo-desc{font-size:0.78rem;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.demo-footer{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--sand);}
+.demo-price{font-size:0.85rem;color:var(--accent);font-weight:500;}
+.demo-link{
+  font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent);text-decoration:none;
+  display:flex;align-items:center;gap:6px;transition:gap 0.25s;
+}
+.demo-link:hover{gap:10px;}
+.demo-link::after{content:'→';}
+
+/* COMING SOON CARD */
+.demo-card.soon{opacity:0.55;}
+.soon-badge{
+  position:absolute;top:52px;left:0;right:0;
+  background:var(--ink);color:rgba(253,250,246,0.7);
+  font-size:0.58rem;letter-spacing:0.28em;text-transform:uppercase;
+  padding:8px;text-align:center;z-index:2;
 }
 
-.hero h1 {
-  font-family: 'Playfair Display';
-  font-size: 44px;
-  max-width: 650px;
-  margin: auto;
-  line-height: 1.2;
-}
+/* PRICING */
+.pricing-wrap{max-width:900px;margin:0 auto;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--sand);}
+.pc{background:var(--bg);padding:48px 36px;text-align:center;position:relative;overflow:hidden;transition:background 0.3s,transform 0.3s;}
+.pc:hover{background:var(--white);transform:translateY(-5px);}
+.pc.hot{background:var(--ink);}
+.pc.hot:hover{background:#2a1a0e;}
+.pc-bar{position:absolute;top:0;left:0;right:0;height:3px;background:var(--sand);transition:background 0.3s;}
+.pc:hover .pc-bar{background:var(--accent);}
+.pc.hot .pc-bar{background:var(--accent);}
+.pc-tier{font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.pc-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:20px;}
+.pc.hot .pc-name{color:#fff;}
+.pc-price{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--ink);line-height:1;}
+.pc.hot .pc-price{color:#fff;}
+.pc-per{font-size:0.65rem;color:var(--muted);display:block;margin-bottom:28px;}
+.pc.hot .pc-per{color:rgba(253,250,246,0.35);}
+.pc-list{list-style:none;margin-bottom:30px;text-align:left;}
+.pc-item{font-size:0.78rem;color:var(--muted);padding:9px 0;border-bottom:1px solid rgba(140,92,74,0.08);display:flex;gap:10px;align-items:flex-start;}
+.pc-item::before{content:'✓';color:var(--accent);font-size:0.65rem;margin-top:2px;flex-shrink:0;}
+.pc.hot .pc-item{color:rgba(253,250,246,0.55);border-bottom-color:rgba(253,250,246,0.07);}
+.pc-note{font-size:0.68rem;color:var(--muted);margin-top:12px;}
+.pc.hot .pc-note{color:rgba(253,250,246,0.25);}
+.extras-note{text-align:center;margin-top:20px;font-size:0.75rem;color:var(--muted);line-height:1.8;}
+.extras-note strong{color:var(--accent);}
 
-.hero p {
-  margin-top: 10px;
-  font-size: 15px;
-  opacity: 0.7;
-}
-
-.hero-btn {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 10px 24px;
-  border-radius: 25px;
-  background: #9b6b6b;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.hero-btn:hover {
-  background: #7d5252;
-}
-
-/* SECTION */
-.section {
-  padding: 50px 8%; /* reduced */
-}
-
-.section h2 {
-  text-align: center;
-  font-family: 'Playfair Display';
-  font-size: 28px;
-  margin-bottom: 30px;
-}
-
-/* CATEGORY */
-.category {
-  margin-bottom: 50px;
-}
-
-/* GRID */
-.packages {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap: 20px;
-}
-
-/* CARD */
-.package {
-  background: white;
-  border-radius: 14px;
-  overflow: hidden;
-  transition: 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-  transition: transform 0.4s ease;
-
-}
-
-.package:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-
-/* IMAGE */
-.package img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  object-position: 0% 70%; 
-  transition: transform 0.4s ease;
-
-}
-
-/* CONTENT */
-.package-content {
-  padding: 18px;
-  text-align: center;
-}
-
-.package-content h3 {
-  font-family: 'Playfair Display';
-  font-size: 20px;
-}
-
-.package-content p {
-  font-size: 13px;
-  opacity: 0.7;
-}
-
-/* BUTTON */
-.package-content a {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 18px;
-  border-radius: 25px;
-  border: 1px solid #9b6b6b;
-  color: #9b6b6b;
-  text-decoration: none;
-  font-size: 13px;
-  transition: 0.3s;
-}
-
-.package-content a:hover {
-  background: #9b6b6b;
-  color: white;
-}
+/* PROCESS */
+.process-wrap{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+.process-wrap::before{content:'';position:absolute;top:26px;left:12.5%;right:12.5%;height:1px;background:var(--sand);}
+.step{text-align:center;padding:0 14px;}
+.step-n{width:52px;height:52px;border-radius:50%;background:var(--white);border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--accent);margin:0 auto 18px;position:relative;z-index:1;}
+.step-title{font-size:0.82rem;font-weight:500;color:var(--ink);margin-bottom:7px;}
+.step-desc{font-size:0.74rem;color:var(--muted);line-height:1.65;}
 
 /* CTA */
-.cta {
-  text-align: center;
-  padding: 60px 20px;
-}
+.cta-section{background:var(--ink);padding:100px 52px;text-align:center;}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:#fff;margin-bottom:12px;}
+.cta-section h2 em{font-style:italic;color:var(--accent2);}
+.cta-section p{font-size:0.86rem;color:rgba(253,250,246,0.4);margin-bottom:36px;line-height:1.8;max-width:420px;margin-left:auto;margin-right:auto;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 
-.cta h2 {
-  font-family: 'Playfair Display';
-  font-size: 26px;
-}
+/* FOOTER */
+footer{background:#0e0a06;padding:24px 52px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.ft-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--accent);}
+.ft-copy{font-size:0.63rem;color:rgba(253,250,246,0.16);}
+.ft-links{display:flex;gap:18px;list-style:none;}
+.ft-links a{font-size:0.63rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(253,250,246,0.2);text-decoration:none;transition:color 0.25s;}
+.ft-links a:hover{color:var(--accent);}
 
-.cta a {
-  display: inline-block;
-  margin-top: 12px;
-  background: #9b6b6b;
-  color: white;
-  padding: 12px 28px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 14px;
-}
+/* WA */
+.wa{position:fixed;bottom:24px;right:24px;z-index:200;width:52px;height:52px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.3s;}
+.wa:hover{transform:scale(1.1);}
 
-/* MOBILE */
-@media(max-width:768px){
-  .hero h1 {
-    font-size: 30px;
-  }
-}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(22px);transition:opacity 0.75s ease,transform 0.75s ease;}
+.rv.on{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}
 
+@media(max-width:900px){
+  nav{padding:0 18px;} .nav-links{display:none;}
+  .hero{padding:68px 18px 56px;}
+  .section{padding:64px 18px;}
+  .trust{padding:14px 18px;gap:18px;}
+  .demo-grid{grid-template-columns:1fr;}
+  .pricing-grid{grid-template-columns:1fr;gap:3px;}
+  .process-wrap{grid-template-columns:1fr 1fr;gap:28px;} .process-wrap::before{display:none;}
+  footer{flex-direction:column;text-align:center;padding:20px 18px;} .ft-links{justify-content:center;}
+  .niche-label{flex-direction:column;align-items:flex-start;gap:8px;}
+}
 </style>
 </head>
-
 <body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Aishwarya <em>· Websites</em></a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#process">How It Works</a></li>
+    </ul>
+    <a href="https://wa.me/918369021400" class="nav-cta" target="_blank">WhatsApp Me</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
-  <h1>I design websites that make your business look premium</h1>
-  <p>Helping small businesses attract customers and grow</p>
-  <a href="https://wa.me/918369021400" class="hero-btn">
-    Contact on WhatsApp
-  </a>
-</section>
-
-<!-- JEWELLERY FIRST -->
-<section class="section category">
-  <h2>Jewellery Websites</h2>
-
-  <div class="packages">
-
-    <div class="package">
-      <img src="https://i.pinimg.com/236x/58/bf/ee/58bfeee0c5310aa78d7122e6b855a597.jpg">
-      <div class="package-content">
-        <h3>Starter Website</h3>
-        <p>Clean product showcase design</p>
-        <a href="https://jewellery-starter.vercel.app/">View Website</a>
-      </div>
-    </div>
-
-    <div class="package">
-      <img src="https://www.ainwear.in/cdn/shop/files/8A388FBE-1600-4F49-A416-291C08CD5AE8.jpg">
-      <div class="package-content">
-        <h3>Business Website</h3>
-        <p>Better layout with collections</p>
-        <a href="https://jewellery-business.vercel.app/">View Website</a>
-      </div>
-    </div>
-
-    <div class="package">
-      <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638">
-      <div class="package-content">
-        <h3>Premium Website</h3>
-        <p>Luxury feel with advanced design</p>
-        <a href="https://jewellery-premium.vercel.app/">View Website</a>
-      </div>
-    </div>
-
+  <div class="hero-eyebrow">Web Designer · Kharghar, Navi Mumbai</div>
+  <h1>Your business deserves to be found <em>online</em></h1>
+  <p class="hero-sub">I build professional websites for salons, jewellery shops, cafés, MUAs and more — that help you get found online and attract new customers.</p>
+  <div class="hero-intro">
+    <strong>Hi, I'm Aishwarya</strong>
+    <div class="hero-intro-dot"></div>
+    Based in Kharghar, Navi Mumbai
+    <div class="hero-intro-dot"></div>
+    Ready in 5–7 days
+  </div>
+  <div class="hero-btns">
+    <a href="#work" class="btn-primary">See My Work ↓</a>
+    <a href="https://wa.me/918369021400" class="btn-secondary" target="_blank">WhatsApp Me</a>
   </div>
 </section>
 
-<!-- SALON -->
-<section class="section category">
-  <h2>Salon Websites</h2>
+<!-- TRUST -->
+<div class="trust">
+  <div class="ti">5–7 Day Delivery</div>
+  <div class="ti">WhatsApp Button Included</div>
+  <div class="ti">Works on Mobile</div>
+  <div class="ti">2 Free Revisions</div>
+  <div class="ti">50% Advance · 50% on Delivery</div>
+</div>
 
-  <div class="packages">
+<!-- WORK -->
+<section class="section section-light" id="work">
+  <div class="sec-hd rv">
+    <div class="sec-eyebrow">Live Examples</div>
+    <h2 class="sec-title">See My <em>Work</em></h2>
+    <p class="sec-sub">Every card below is a real working website. Click "View Demo" to open it live.</p>
+  </div>
 
-    <div class="package">
-      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
-      <div class="package-content">
-        <h3>Starter Website</h3>
-        <p>Simple and clean online presence</p>
-        <a href="https://salon-starter.vercel.app/">View Website</a>
+  <!-- SALON -->
+  <div class="niche-block rv">
+    <div class="niche-label">
+      <div class="niche-label-left">
+        <div class="niche-name">Salon & Spa</div>
+        <div class="niche-count">3 Packages</div>
+      </div>
+      <div class="niche-from">From <strong>₹3,000</strong></div>
+    </div>
+    <div class="demo-grid">
+
+      <div class="demo-card">
+        <div class="demo-preview">
+          <img src="https://media.istockphoto.com/id/1423513079/photo/luxury-hairdressing-and-beauty-salon-interior-with-chairs-mirrors-and-spotlights.jpg?s=612x612&w=0&k=20&c=T2cw6HblRzWPOlxPHsMcV9KRV8aLGOaLojvLe3Yoi_A=" alt="Salon Starter"/>
+          <div class="demo-overlay"><a href="https://salon-starter.vercel.app/" class="demo-overlay-btn" target="_blank">View Demo</a></div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-tier">Basic Package</div>
+          <div class="demo-name">Starter Website</div>
+          <p class="demo-desc">Clean single page — hero, services list, contact details and WhatsApp button. Perfect to get online fast.</p>
+          <div class="demo-footer">
+            <div class="demo-price">₹3,000</div>
+            <a href="https://salon-starter.vercel.app/" class="demo-link" target="_blank">View Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-preview">
+          <img src="https://media.istockphoto.com/id/1325440885/photo/retro-styled-beauty-salon.jpg?s=612x612&w=0&k=20&c=uEdh3ypS-Zeq9X5YJzIfBaiaoFYstRFNowZBTbQWT8I=" alt="Salon Business"/>
+          <div class="demo-overlay"><a href="https://salon-business-website.vercel.app/" class="demo-overlay-btn" target="_blank">View Demo</a></div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-tier">Standard Package</div>
+          <div class="demo-name">Business Website</div>
+          <p class="demo-desc">Gallery, about section, testimonials, booking form and Google Maps. Looks fully professional.</p>
+          <div class="demo-footer">
+            <div class="demo-price">₹6,000</div>
+            <a href="https://salon-business-website.vercel.app/" class="demo-link" target="_blank">View Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-preview">
+          <img src="https://media.istockphoto.com/id/1357705422/photo/luxury-spa-massage-room-interior-with-massage-tables-hot-tub-and-marble-floor.jpg?s=612x612&w=0&k=20&c=spSLgcy-iTCM5yDvI-3pxMnXyL91wjCm-7oBcGwZO6Q=" alt="Salon Premium"/>
+          <div class="demo-overlay"><a href="https://salon-premium-luxury.vercel.app/" class="demo-overlay-btn" target="_blank">View Demo</a></div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-tier">Premium Package</div>
+          <div class="demo-name">Luxury Website</div>
+          <p class="demo-desc">Editorial design, scroll animations, masonry gallery, custom effects. Looks like a top brand.</p>
+          <div class="demo-footer">
+            <div class="demo-price">₹12,000</div>
+            <a href="https://salon-premium-luxury.vercel.app/" class="demo-link" target="_blank">View Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JEWELLERY -->
+  <div class="niche-block rv d1">
+    <div class="niche-label">
+      <div class="niche-label-left">
+        <div class="niche-name">Jewellery Shop</div>
+        <div class="niche-count">3 Packages</div>
+      </div>
+      <div class="niche-from">From <strong>₹3,000</strong></div>
+    </div>
+    <div class="demo-grid">
+
+      <div class="demo-card">
+        <div class="demo-preview">
+          <img src="https://media.istockphoto.com/id/1403525183/photo/chain-shape-golden-modern-bracelet-and-ring-on-white-podium-with-copy-space.jpg?s=612x612&w=0&k=20&c=UFz77NPW2RFmAYIE5WQ82GDQCrilFoz__sThfcb8Z1U=" alt="Jewellery Starter"/>
+          <div class="demo-overlay"><a href="https://jewellery-starter.vercel.app/" class="demo-overlay-btn" target="_blank">View Demo</a></div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-tier">Basic Package</div>
+          <div class="demo-name">Starter Website</div>
+          <p class="demo-desc">Clean product showcase with your collections, pricing and WhatsApp button for orders.</p>
+          <div class="demo-footer">
+            <div class="demo-price">₹3,000</div>
+            <a href="https://jewellery-starter.vercel.app/" class="demo-link" target="_blank">View Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-preview">
+          <img src="https://media.istockphoto.com/id/1274828798/photo/collection-of-rings.jpg?s=612x612&w=0&k=20&c=0jfGzuSw1YhjX6YU8ykIcm4jyouzBzwzIJplvJPvH88=" alt="Jewellery Business"/>
+          <div class="demo-overlay"><a href="https://jewellery-business.vercel.app/" class="demo-overlay-btn" target="_blank">View Demo</a></div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-tier">Standard Package</div>
+          <div class="demo-name">Business Website</div>
+          <p class="demo-desc">Multiple collections, photo gallery, about your story and customer enquiry form.</p>
+          <div class="demo-footer">
+            <div class="demo-price">₹6,000</div>
+            <a href="https://jewellery-business.vercel.app/" class="demo-link" target="_blank">View Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1720686615435-b7e7e67e9b4c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fGx1eHVyeSUyMG5lY2tsYWNlc3xlbnwwfDB8MHx8fDA%3D" alt="Jewellery Premium"/>
+          <div class="demo-overlay"><a href="https://jewellery-premium.vercel.app/" class="demo-overlay-btn" target="_blank">View Demo</a></div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-tier">Premium Package</div>
+          <div class="demo-name">Luxury Website</div>
+          <p class="demo-desc">High-end luxury feel, cinematic design, animations and premium typography. Looks like a big brand.</p>
+          <div class="demo-footer">
+            <div class="demo-price">₹12,000</div>
+            <a href="https://jewellery-premium.vercel.app/" class="demo-link" target="_blank">View Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CAFE -->
+  <div class="niche-block rv d2">
+    <div class="niche-label">
+      <div class="niche-label-left">
+        <div class="niche-name">Café & Restaurant</div>
+        <div class="niche-count">Coming Soon</div>
+      </div>
+      <div class="niche-from">From <strong>₹3,000</strong></div>
+    </div>
+    <div class="demo-grid">
+
+      <div class="demo-card soon">
+        <div class="browser">
+          <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+          <div class="browser-bar">cafe-starter.vercel.app</div>
+        </div>
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=700&q=80" alt="Cafe Starter"/>
+          <div class="soon-badge">Demo Coming Soon</div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-tier">Basic Package</div>
+          <div class="demo-name">Starter Website</div>
+          <p class="demo-desc">Menu, location, opening hours and WhatsApp button for reservations and orders.</p>
+          <div class="demo-footer">
+            <div class="demo-price">₹3,000</div>
+            <a href="https://wa.me/918369021400" class="demo-link" target="_blank">Ask Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card soon">
+        <div class="browser">
+          <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+          <div class="browser-bar">cafe-business.vercel.app</div>
+        </div>
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=700&q=80" alt="Cafe Business"/>
+          <div class="soon-badge">Demo Coming Soon</div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-tier">Standard Package</div>
+          <div class="demo-name">Business Website</div>
+          <p class="demo-desc">Full menu, ambience gallery, about story, table reservations and Google Maps.</p>
+          <div class="demo-footer">
+            <div class="demo-price">₹6,000</div>
+            <a href="https://wa.me/918369021400" class="demo-link" target="_blank">Ask Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card soon">
+        <div class="browser">
+          <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+          <div class="browser-bar">cafe-premium.vercel.app</div>
+        </div>
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80" alt="Cafe Premium"/>
+          <div class="soon-badge">Demo Coming Soon</div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-tier">Premium Package</div>
+          <div class="demo-name">Luxury Website</div>
+          <p class="demo-desc">Cinematic food photography layout, scroll animations, online reservation form.</p>
+          <div class="demo-footer">
+            <div class="demo-price">₹12,000</div>
+            <a href="https://wa.me/918369021400" class="demo-link" target="_blank">Ask Me</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- PRICING -->
+<section class="section section-bg" id="pricing">
+  <div class="sec-hd rv">
+    <div class="sec-eyebrow">Packages</div>
+    <h2 class="sec-title">Clear <em>Pricing</em></h2>
+    <p class="sec-sub">No hidden charges. You know exactly what you're getting before you pay.</p>
+  </div>
+  <div class="pricing-wrap">
+    <div class="pricing-grid">
+      <div class="pc rv">
+        <div class="pc-bar"></div>
+        <div class="pc-tier">Starter</div>
+        <div class="pc-name">Basic</div>
+        <div class="pc-price">₹3,000</div>
+        <span class="pc-per">one time</span>
+        <ul class="pc-list">
+          <li class="pc-item">1 page website</li>
+          <li class="pc-item">Hero + Services + Contact</li>
+          <li class="pc-item">WhatsApp button</li>
+          <li class="pc-item">Mobile friendly</li>
+          <li class="pc-item">2 free revisions</li>
+          <li class="pc-item">Ready in 5 days</li>
+        </ul>
+        <a href="https://wa.me/918369021400" class="btn-secondary" style="display:block;text-align:center;" target="_blank">Get Started</a>
+        <p class="pc-note">+ ₹1,500/yr for hosting & domain</p>
+      </div>
+      <div class="pc hot rv d1">
+        <div class="pc-bar"></div>
+        <div class="pc-tier">Most Popular</div>
+        <div class="pc-name">Standard</div>
+        <div class="pc-price">₹6,000</div>
+        <span class="pc-per">one time</span>
+        <ul class="pc-list">
+          <li class="pc-item">Everything in Basic</li>
+          <li class="pc-item">Photo gallery</li>
+          <li class="pc-item">About + Testimonials</li>
+          <li class="pc-item">Enquiry / booking form</li>
+          <li class="pc-item">Google Maps embed</li>
+          <li class="pc-item">Ready in 6 days</li>
+        </ul>
+        <a href="https://wa.me/918369021400" class="btn-primary" style="display:block;text-align:center;" target="_blank">Get Started</a>
+        <p class="pc-note" style="color:rgba(253,250,246,0.25);">+ ₹1,500/yr for hosting & domain</p>
+      </div>
+      <div class="pc rv d2">
+        <div class="pc-bar"></div>
+        <div class="pc-tier">Premium</div>
+        <div class="pc-name">Luxury</div>
+        <div class="pc-price">₹12,000</div>
+        <span class="pc-per">one time</span>
+        <ul class="pc-list">
+          <li class="pc-item">Everything in Standard</li>
+          <li class="pc-item">Premium animations</li>
+          <li class="pc-item">Editorial luxury design</li>
+          <li class="pc-item">Masonry gallery</li>
+          <li class="pc-item">Custom visual effects</li>
+          <li class="pc-item">Ready in 7 days</li>
+        </ul>
+        <a href="https://wa.me/918369021400" class="btn-secondary" style="display:block;text-align:center;" target="_blank">Get Started</a>
+        <p class="pc-note">+ ₹1,500/yr for hosting & domain</p>
       </div>
     </div>
+    <p class="extras-note rv">
+      Monthly maintenance <strong>₹500/month</strong> (text & image updates) &nbsp;·&nbsp;
+      Extra page <strong>₹1,500</strong> &nbsp;·&nbsp;
+      Additional revision round <strong>₹500</strong> &nbsp;·&nbsp;
+      New section after delivery — <strong>quoted separately</strong>
+    </p>
+  </div>
+</section>
 
-    <div class="package">
-      <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948">
-      <div class="package-content">
-        <h3>Business Website</h3>
-        <p>Structured design with services & gallery</p>
-        <a href="https://salon-business-website.vercel.app/">View Website</a>
-      </div>
+<!-- PROCESS -->
+<section class="section section-light" id="process">
+  <div class="sec-hd rv">
+    <div class="sec-eyebrow">How It Works</div>
+    <h2 class="sec-title">Simple <em>4 Steps</em></h2>
+  </div>
+  <div class="process-wrap">
+    <div class="step rv">
+      <div class="step-n">1</div>
+      <div class="step-title">WhatsApp Me</div>
+      <p class="step-desc">Tell me your business type and which package suits you.</p>
     </div>
-
-    <div class="package">
-      <img src="https://media.istockphoto.com/id/1546442230/photo/front-view-skin-care-products-on-wooden-decorative-piece.jpg?s=612x612&w=0&k=20&c=4qEsfqeNNAcrlzZOwMjs9mZzPBUf1ey22v0gSjt7NcY=">
-      <div class="package-content">
-        <h3>Premium Website</h3>
-        <p>Modern and high-end user experience</p>
-        <a href="https://salon-premium-luxury.vercel.app/">View Website</a>
-      </div>
+    <div class="step rv d1">
+      <div class="step-n">2</div>
+      <div class="step-title">Share Details</div>
+      <p class="step-desc">Send your logo, photos, services, address and phone number.</p>
     </div>
-
+    <div class="step rv d2">
+      <div class="step-n">3</div>
+      <div class="step-title">I Build It</div>
+      <p class="step-desc">I design and build your full website within 5–7 days.</p>
+    </div>
+    <div class="step rv d3">
+      <div class="step-n">4</div>
+      <div class="step-title">You Go Live</div>
+      <p class="step-desc">Review, approve, pay balance — your site is live on the internet.</p>
+    </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta">
-  <h2>Want a website like this?</h2>
-  <a href="https://wa.me/918369021400">Contact on WhatsApp</a>
+<section class="cta-section">
+  <h2>Ready to get your business <em>online?</em></h2>
+  <p>WhatsApp me right now — I'll reply within 1 hour.<br/>First 10 clients of April get 10% off — limited spots left.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/918369021400" class="btn-primary" target="_blank">WhatsApp Me Now →</a>
+    <a href="#work" class="btn-secondary" style="border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.5);">See My Work</a>
+  </div>
 </section>
 
+<!-- FOOTER -->
+<footer>
+  <div class="ft-logo">Aishwarya · Websites</div>
+  <p class="ft-copy">© 2025 · Kharghar, Navi Mumbai · +91 83690 21400</p>
+  <ul class="ft-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="https://wa.me/918369021400" target="_blank">Contact</a></li>
+  </ul>
+</footer>
+
+<a href="https://wa.me/918369021400" class="wa" target="_blank">💬</a>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => {
+  if(x.isIntersecting) x.target.classList.add('on');
+}), { threshold: 0.08 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
