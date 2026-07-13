@@ -42,7 +42,9 @@ Start a Project
             class="district-city"
             alt="Web District showcasing website demos"
             loading="eager"
-            fetchpriority="high">
+            fetchpriority="high"
+            width="1000"
+            height="1000">
 
         <!-- Hospital -->
         <a href="https://demo-polyclinic.vercel.app/" target="_blank" rel="noopener" class="hotspot hospital" aria-label="Medical Website">
