@@ -13,7 +13,9 @@ return `
 
 </a>
 
-<button class="menu-toggle">
+<button
+class="menu-toggle"
+aria-label="Open navigation menu">
 
 ☰
 
@@ -29,7 +31,7 @@ return `
 
 <a href="#process">Process</a>
 
-<a href="#contact" class="nav-cta">Let's Talk</a>
+<a href="#contact" class="nav-cta">Start Project</a>
 
 </nav>
 
