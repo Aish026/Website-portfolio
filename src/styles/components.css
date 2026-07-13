@@ -1,14 +1,13 @@
 
 .hero-right{
 
-    display:flex;
+display:flex;
 
-    justify-content:flex-end;
+justify-content:center;
 
-    align-items:center;
+align-items:center;
 
-    margin-top:50px;
-    
+margin-top:0;
 
 }
 
@@ -460,13 +459,13 @@ transform:translateY(-4px);
 
 .district-wrapper{
 
-    position:relative;
+position:relative;
 
-    width:100%;
+width:100%;
 
-    max-width:1050px;
+max-width:820px;
 
-    margin-left:auto;
+margin:0 auto;
 
 }
 
@@ -510,7 +509,7 @@ transform:translateY(-4px);
 
     animation:floatDistrict 8s ease-in-out infinite;
 
-    transform:scale(1.18);
+    transform:scale(1.08);
 
     transform-origin:center;
 
@@ -574,6 +573,12 @@ transform:translateY(-4px);
 .hotspot:hover::after{
 
     opacity:1;
+
+}
+
+.hotspot:hover .district-city{
+
+transform:scale(1.12);
 
 }
 
