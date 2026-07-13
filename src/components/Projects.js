@@ -33,7 +33,7 @@ ${projects.map(project=>`
 
 <div class="project-image">
 
-<img src="/images/${project.id}.webp" alt="${project.title}">
+<img src="/images/${project.id}.webp" alt="${project.title}" loading="lazy" decoding="async" width="800" height="550">
 
 </div>
 
