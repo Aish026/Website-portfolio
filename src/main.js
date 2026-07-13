@@ -21,6 +21,9 @@ import backtotop from "./backtotop";
 
 document.querySelector("#app").innerHTML = `
 ${Navbar()}
+
+<main>
+
 ${Hero()}
 ${Studio()}
 ${Projects()}
@@ -28,10 +31,12 @@ ${Process()}
 ${Testimonials()}
 ${Faq()}
 ${Contact()}
+
+</main>
+
 ${Footer()}
 `;
 
-homeanimation();
 projectAnimation();
 processAnimation();
 testimonialAnimation();
