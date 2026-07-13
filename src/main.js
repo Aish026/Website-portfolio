@@ -10,7 +10,6 @@ import Faq from "./components/Faq";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-import homeanimation from "./animations/homeanimation";
 import projectAnimation from "./animations/projectAnimation";
 import processAnimation from "./animations/processAnimation";
 import testimonialAnimation from "./animations/testimonialAnimation";
