@@ -1,0 +1,823 @@
+@media (max-width:1200px){
+
+.hero{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    gap:80px;
+
+    min-height:auto;
+
+    padding:140px 40px 80px;
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+.hero-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.hero-actions{
+
+    justify-content:center;
+
+}
+
+.hero-right{
+
+    justify-content:center;
+
+    margin-top:20px;
+
+}
+
+.district-wrapper{
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+}
+
+/* ====================================
+   HERO
+==================================== */
+
+@media (max-width:992px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:60px;
+
+padding:130px 40px 80px;
+
+min-height:auto;
+
+}
+
+.hero-content{
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.hero-actions{
+
+justify-content:center;
+
+}
+
+.hero-right{
+
+justify-content:center;
+
+margin-top:0;
+
+}
+
+.district-wrapper{
+
+max-width:650px;
+
+margin:auto;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+padding:120px 20px 50px;
+
+gap:40px;
+
+}
+
+.hero h1{
+
+font-size:clamp(2.8rem,10vw,4rem);
+
+line-height:1.05;
+
+}
+
+.hero-description{
+
+font-size:16px;
+
+max-width:100%;
+
+margin:20px auto 0;
+
+}
+
+.hero-actions{
+
+flex-direction:row;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:14px;
+
+margin-top:30px;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+padding:16px 28px;
+
+}
+
+.district-wrapper{
+
+max-width:480px;
+
+}
+
+.district-city{
+
+transform:scale(1);
+
+animation:none;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.hero{
+
+padding:105px 18px 40px;
+
+}
+
+.hero h1{
+
+font-size:2.6rem;
+
+}
+
+.hero-actions{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+width:220px;
+
+justify-content:center;
+
+}
+
+.district-wrapper{
+
+max-width:360px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.district-card{
+
+display:none;
+
+}
+
+.hotspot::before,
+.hotspot::after{
+
+display:none;
+
+}
+
+}
+
+/* ====================================
+   PROJECTS
+==================================== */
+
+@media (max-width:1200px){
+
+.project-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:26px;
+
+}
+
+.projects{
+
+padding:0 40px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.projects{
+
+padding:0 20px;
+
+margin:80px auto;
+
+}
+
+.section-title{
+
+margin-bottom:50px;
+
+}
+
+.section-title h2{
+
+font-size:2.4rem;
+
+}
+
+.section-intro{
+
+font-size:16px;
+
+max-width:100%;
+
+}
+
+.project-grid{
+
+grid-template-columns:1fr;
+
+gap:24px;
+
+}
+
+.project-card{
+
+border-radius:24px;
+
+}
+
+.project-content{
+
+padding:24px;
+
+}
+
+.project-content h3{
+
+font-size:28px;
+
+}
+
+.project-desc{
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.project-image{
+
+aspect-ratio:16/10;
+
+}
+
+.project-content{
+
+padding:20px;
+
+}
+
+.project-content h3{
+
+font-size:24px;
+
+}
+
+.project-top span{
+
+font-size:11px;
+
+letter-spacing:2px;
+
+}
+
+.arrow{
+
+width:34px;
+
+height:34px;
+
+font-size:16px;
+
+}
+
+}
+
+/* ====================================
+   STUDIO
+==================================== */
+
+@media (max-width:992px){
+
+.studio{
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+padding:0 40px;
+
+margin:100px auto;
+
+}
+
+.studio-left,
+.studio-right{
+
+text-align:center;
+
+}
+
+.studio h2{
+
+max-width:100%;
+
+}
+
+.studio-right{
+
+justify-content:center;
+
+}
+
+.studio-right p{
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.studio::before{
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+}
+
+@media (max-width:768px){
+
+.studio{
+
+padding:0 20px;
+
+gap:35px;
+
+margin:80px auto;
+
+}
+
+.studio h2{
+
+font-size:2.4rem;
+
+}
+
+.studio-right p{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.studio h2{
+
+font-size:2rem;
+
+}
+
+.studio-right p{
+
+font-size:16px;
+
+}
+
+}
+
+/* ====================================
+   PROCESS
+==================================== */
+
+@media (max-width:1200px){
+
+.process-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:768px){
+
+.process{
+
+padding:0 20px;
+
+margin:100px auto;
+
+}
+
+.process-grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+margin-top:50px;
+
+}
+
+.process-card{
+
+padding:28px;
+
+}
+
+.process-card h3{
+
+font-size:26px;
+
+}
+
+.process-card p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.process-card span{
+
+width:48px;
+
+height:48px;
+
+margin-bottom:20px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.process-card{
+
+padding:24px;
+
+}
+
+.process-card h3{
+
+font-size:24px;
+
+}
+
+}
+
+/* ====================================
+   TESTIMONIALS
+==================================== */
+
+@media (max-width:1200px){
+
+.testimonial-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:768px){
+
+.testimonials{
+
+padding:0 20px;
+
+margin:100px auto;
+
+}
+
+.testimonial-grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+margin-top:50px;
+
+}
+
+.testimonial-card{
+
+padding:28px;
+
+}
+
+.testimonial-card p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.testimonial-author h4{
+
+font-size:20px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.testimonial-card{
+
+padding:24px;
+
+}
+
+}
+
+/* ====================================
+   FAQ
+==================================== */
+
+@media (max-width:768px){
+
+.faq{
+
+padding:0 20px;
+
+margin:100px auto;
+
+}
+
+.faq-list{
+
+margin-top:45px;
+
+}
+
+.faq details{
+
+padding:22px;
+
+}
+
+.faq summary{
+
+font-size:20px;
+
+line-height:1.4;
+
+}
+
+.faq p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.faq summary{
+
+font-size:18px;
+
+}
+
+}
+
+/* ====================================
+   CONTACT
+==================================== */
+
+@media (max-width:992px){
+
+.contact{
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+padding:0 40px;
+
+text-align:center;
+
+}
+
+.contact-left p{
+
+margin:auto;
+
+}
+
+.contact-card{
+
+max-width:520px;
+
+margin:auto;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.contact{
+
+padding:0 20px;
+
+margin:100px auto;
+
+}
+
+.contact-left h2{
+
+font-size:2.5rem;
+
+}
+
+.contact-left p{
+
+font-size:17px;
+
+}
+
+.contact-card{
+
+padding:30px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.contact-left h2{
+
+font-size:2rem;
+
+}
+
+.contact-card{
+
+padding:24px;
+
+}
+
+.contact-card h3{
+
+font-size:28px;
+
+}
+
+.contact-card a{
+
+font-size:16px;
+
+}
+
+}
+
+/* ====================================
+   FOOTER
+==================================== */
+
+@media (max-width:768px){
+
+.footer{
+
+padding:35px 20px;
+
+font-size:14px;
+
+}
+
+}
+
+/* Mobile District */
+
+.mobile-district-list{
+
+display:none;
+
+}
+
+@media(max-width:768px){
+
+.hotspot{
+
+display:none;
+
+}
+
+.mobile-district-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+margin-top:30px;
+
+}
+
+.mobile-district-list a{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:18px 22px;
+
+background:white;
+
+border-radius:18px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.mobile-district-list a:hover{
+
+transform:translateY(-3px);
+
+}
+
+}

@@ -1,0 +1,74 @@
+:root{
+
+/* COLORS */
+
+--canvas:#F8F5EF;
+
+--stone:#E7DDCD;
+
+--forest:#24342E;
+
+--olive:#5C6D59;
+
+--copper:#B96A3A;
+
+--gold:#D7A15D;
+
+--charcoal:#1C1C1C;
+
+--white:#FFFFFF;
+
+
+/* FONTS */
+
+--heading:"Clash Display",sans-serif;
+
+--body:"Manrope",sans-serif;
+
+--mono:"IBM Plex Mono",monospace;
+
+
+/* SPACING */
+
+--space-1:.5rem;
+
+--space-2:1rem;
+
+--space-3:1.5rem;
+
+--space-4:2rem;
+
+--space-5:3rem;
+
+--space-6:4rem;
+
+--space-7:6rem;
+
+--space-8:8rem;
+
+
+/* RADIUS */
+
+--radius-sm:10px;
+
+--radius-md:18px;
+
+--radius-lg:28px;
+
+--radius-xl:40px;
+
+
+/* SHADOW */
+
+--shadow:
+
+0 30px 80px rgba(0,0,0,.08);
+
+
+/* TRANSITION */
+
+--transition:
+
+all .45s cubic-bezier(.22,1,.36,1);
+
+}
