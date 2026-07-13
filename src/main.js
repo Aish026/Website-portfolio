@@ -37,7 +37,6 @@ ${Contact()}
 ${Footer()}
 `;
 
-homeanimation()
 projectAnimation();
 processAnimation();
 testimonialAnimation();
