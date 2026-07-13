@@ -110,9 +110,9 @@ margin:auto;
 
 .hero{
 
-padding:120px 20px 50px;
+padding:120px 20px 60px;
 
-gap:40px;
+gap:30px;
 
 }
 
@@ -155,17 +155,43 @@ padding:16px 28px;
 
 }
 
+.hero-right{
+
+width:100%;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
 .district-wrapper{
 
-max-width:560px;
+width:100%;
+
+max-width:100%;
+
+display:flex;
+
+justify-content:center;
+
+overflow:visible;
 
 }
 
 .district-city{
 
-transform:scale(1);
+width:125%;
+
+max-width:none;
+
+transform:none;
 
 animation:none;
+
+filter:drop-shadow(0 20px 40px rgba(0,0,0,.18));
 
 }
 
@@ -204,9 +230,43 @@ justify-content:center;
 
 }
 
+.hero-right{
+
+width:100%;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
 .district-wrapper{
 
-max-width:360px;
+width:100%;
+
+max-width:100%;
+
+overflow:hidden;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.district-city{
+
+width:145%;
+
+max-width:none;
+
+transform:none;
+
+margin-left:0;
+
+animation:none;
 
 }
 
