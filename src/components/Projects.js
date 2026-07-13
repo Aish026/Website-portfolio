@@ -33,7 +33,7 @@ class="project-card"
 role="link"
 tabindex="0"
 onclick="window.open('${project.link}','_blank')"
-onkeydown="if(event.key==='Enter'||event.key===' '){window.open('${project.link}','_blank')}">
+onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.open('${project.link}','_blank')}">
 
 <div class="project-image">
 
