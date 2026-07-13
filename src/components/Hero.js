@@ -40,8 +40,9 @@ Start a Project
         <img
             src="/images/web-district-city.png"
             class="district-city"
-            alt="Web District"
-        >
+            alt="Web District showcasing website demos"
+            loading="eager"
+            fetchpriority="high">
 
         <!-- Hospital -->
         <a href="https://demo-polyclinic.vercel.app/" target="_blank" rel="noopener" class="hotspot hospital" aria-label="Medical Website">
