@@ -38,7 +38,7 @@ Start a Project
     <div class="district-wrapper">
 
         <img
-            src="/images/web-district-city.png"
+            src="/images/web-district-city.webp"
             class="district-city"
             alt="Web District showcasing website demos"
             loading="eager"
