@@ -34,7 +34,9 @@ return `
 
             <div class="testimonial-author">
 
-                <h4>Medical Square</h4>
+                <p class="testimonial-name">
+                    Medical Square
+                </p>
 
                 <span>Healthcare Website</span>
 
@@ -54,7 +56,9 @@ return `
 
             <div class="testimonial-author">
 
-                <h4>Beauty Boulevard</h4>
+                <p class="testimonial-name">
+                    Beauty Boulevard
+                </p>
 
                 <span>Salon Website</span>
 
@@ -74,7 +78,9 @@ return `
 
             <div class="testimonial-author">
 
-                <h4>Restaurant Avenue</h4>
+                <p class="testimonial-name">
+                    Restaurant Avenue
+                </p>
 
                 <span>Restaurant Website</span>
 
