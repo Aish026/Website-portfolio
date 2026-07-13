@@ -28,12 +28,22 @@ return `
 
 ${projects.map(project=>`
 
-<div class="project-card"
-     onclick="window.open('${project.link}','_blank')">
+<div
+class="project-card"
+role="link"
+tabindex="0"
+onclick="window.open('${project.link}','_blank')"
+onkeydown="if(event.key==='Enter'||event.key===' '){window.open('${project.link}','_blank')}">
 
 <div class="project-image">
 
-<img src="/images/${project.id}.webp" alt="${project.title}" loading="lazy" decoding="async" width="800" height="550">
+<img
+src="/images/${project.id}.webp"
+alt="${project.title}"
+loading="lazy"
+decoding="async"
+width="800"
+height="550">
 
 </div>
 
