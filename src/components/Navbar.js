@@ -29,7 +29,7 @@ return `
 
 <a href="#process">Process</a>
 
-<a href="#contact" class="nav-cta">Contact</a>
+<a href="#contact" class="nav-cta">Let's Talk</a>
 
 </nav>
 
