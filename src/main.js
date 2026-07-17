@@ -1,5 +1,4 @@
 import "./styles/main.css";
-
 import homeanimation from "./animations/homeAnimation"; 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
