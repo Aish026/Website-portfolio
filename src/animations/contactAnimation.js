@@ -1,43 +1,27 @@
 import { gsap } from "gsap";
 
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+export default function contactAnimation() {
 
-gsap.registerPlugin(ScrollTrigger);
+    const left = document.querySelector(".contact-left");
+    const card = document.querySelector(".contact-card");
 
-export default function contactAnimation(){
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
 
-    gsap.from(".contact-left",{
+            const fromX = entry.target === left ? -80 : 80;
 
-        x:-80,
+            gsap.from(entry.target, {
+                x: fromX,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
 
-        opacity:0,
+            obs.unobserve(entry.target);
+        });
+    }, { threshold: 0.2 });
 
-        duration:1,
-
-        ease:"power3.out",
-
-        scrollTrigger:{
-            trigger:".contact",
-            start:"top 75%"
-        }
-
-    });
-
-    gsap.from(".contact-card",{
-
-        x:80,
-
-        opacity:0,
-
-        duration:1,
-
-        ease:"power3.out",
-
-        scrollTrigger:{
-            trigger:".contact",
-            start:"top 75%"
-        }
-
-    });
-
+    if (left) observer.observe(left);
+    if (card) observer.observe(card);
 }

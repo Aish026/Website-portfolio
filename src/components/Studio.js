@@ -20,7 +20,7 @@ return `
 
         <p>
 
-            Web District is a curated collection of premium websites created for businesses across healthcare, education, hospitality, beauty and real estate.
+            I'm Aish, a solo web designer and developer based in Navi Mumbai. Web District is my curated collection of premium websites, built for businesses across healthcare, education, hospitality, beauty and real estate.
 
             Every project is designed with a strong focus on visual identity, user experience, performance and long-term usability combining timeless design with modern web standards.
 

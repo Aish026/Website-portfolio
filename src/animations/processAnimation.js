@@ -1,28 +1,25 @@
 import { gsap } from "gsap";
 
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+export default function processAnimation() {
 
-gsap.registerPlugin(ScrollTrigger);
+    const cards = document.querySelectorAll(".process-card");
 
-export default function processAnimation(){
+    if (!cards.length) return;
 
-    gsap.from(".process-card",{
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
 
-        y:60,
+            gsap.from(entry.target, {
+                y: 60,
+                opacity: 0,
+                duration: 0.9,
+                ease: "power3.out"
+            });
 
-        opacity:0,
+            obs.unobserve(entry.target);
+        });
+    }, { threshold: 0.2 });
 
-        stagger:.18,
-
-        duration:.9,
-
-        ease:"power3.out",
-
-        scrollTrigger:{
-            trigger:".process",
-            start:"top 75%"
-        }
-
-    });
-
+    cards.forEach((card) => observer.observe(card));
 }

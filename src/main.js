@@ -5,14 +5,15 @@ import Hero from "./components/Hero";
 import Studio from "./components/Studio";
 import Projects from "./components/Projects";
 import Process from "./components/Process";
-import Testimonials from "./components/Testimonials";
+import Pricing from "./components/Pricing";
+import WhyUs from "./components/WhyUs";
 import Faq from "./components/Faq";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+import homeanimation from "./animations/homeanimation";
 import projectAnimation from "./animations/projectAnimation";
 import processAnimation from "./animations/processAnimation";
-import testimonialAnimation from "./animations/testimonialAnimation";
 import faqAnimation from "./animations/faqAnimation";
 import contactAnimation from "./animations/contactAnimation";
 import activeNav from "./activeNav";
@@ -28,7 +29,8 @@ ${Hero()}
 ${Studio()}
 ${Projects()}
 ${Process()}
-${Testimonials()}
+${Pricing()}
+${WhyUs()}
 ${Faq()}
 ${Contact()}
 
@@ -37,12 +39,19 @@ ${Contact()}
 ${Footer()}
 `;
 
-homeanimation();
-projectAnimation();
-processAnimation();
-testimonialAnimation();
-faqAnimation();
-contactAnimation();
-navbar();
-activeNav();
-backtotop();
+function safeRun(name, fn) {
+    try {
+        fn();
+    } catch (err) {
+        console.error(`[${name}] failed:`, err);
+    }
+}
+
+safeRun("homeanimation", homeanimation);
+safeRun("projectAnimation", projectAnimation);
+safeRun("processAnimation", processAnimation);
+safeRun("faqAnimation", faqAnimation);
+safeRun("contactAnimation", contactAnimation);
+safeRun("navbar", navbar);
+safeRun("activeNav", activeNav);
+safeRun("backtotop", backtotop);

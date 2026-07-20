@@ -16,8 +16,27 @@ that grow your business.
 </h1>
 
 <p class="hero-description">
-Beautiful, fast and conversion-focused websites designed to help businesses stand out and win more customers.
+From no online presence to a live, working website in 1-3 weeks. Designed to make small businesses look established and win more customers.
 </p>
+
+<div class="hero-stats">
+
+<div class="hero-stat">
+<strong>6</strong>
+<span>Industries</span>
+</div>
+
+<div class="hero-stat">
+<strong>1-3 wks</strong>
+<span>Delivery</span>
+</div>
+
+<div class="hero-stat">
+<strong>Fixed</strong>
+<span>Pricing</span>
+</div>
+
+</div>
 
 <div class="hero-actions">
 
@@ -38,7 +57,12 @@ Start a Project
     <div class="district-wrapper">
 
         <img
-            src="/images/web-district-city.webp"
+            src="/images/web-district-city-768.webp"
+            srcset="/images/web-district-city-480.webp 480w,
+                    /images/web-district-city-768.webp 768w,
+                    /images/web-district-city-1100.webp 1100w,
+                    /images/web-district-city.webp 1536w"
+            sizes="(max-width:768px) 90vw, (max-width:1200px) 55vw, 560px"
             class="district-city"
             alt="Web District showcasing website demos"
             loading="eager"
@@ -48,6 +72,8 @@ Start a Project
 
         <!-- Hospital -->
         <a href="https://demo-polyclinic.vercel.app/" target="_blank" rel="noopener" class="hotspot hospital" aria-label="Medical Website">
+
+            <span class="tap-dot"></span>
 
             <div class="district-card">
 
@@ -70,6 +96,8 @@ Start a Project
         <!-- Salon -->
         <a href="https://ultra-premium-salon-website.vercel.app/" target="_blank" rel="noopener" class="hotspot salon" aria-label="Salon Website">
 
+            <span class="tap-dot"></span>
+
             <div class="district-card">
 
                 <span>Salon</span>
@@ -90,6 +118,8 @@ Start a Project
 
         <!-- Restaurant -->
         <a href="https://cafe-premium2.vercel.app/" target="_blank" rel="noopener" class="hotspot restaurant" aria-label="Restaurant Website">
+
+            <span class="tap-dot"></span>
 
             <div class="district-card">
 
@@ -112,6 +142,8 @@ Start a Project
         <!-- Education -->
         <a href="https://education-institute-demo.vercel.app/" target="_blank" rel="noopener" class="hotspot education" aria-label="Education Website">
 
+            <span class="tap-dot"></span>
+
             <div class="district-card">
 
                 <span>Education</span>
@@ -132,6 +164,8 @@ Start a Project
 
         <!-- Real Estate -->
         <a href="https://demo-for-realestate.vercel.app/" target="_blank" rel="noopener" class="hotspot realestate" aria-label="Real Estate Website">
+
+            <span class="tap-dot"></span>
 
             <div class="district-card">
 
@@ -154,6 +188,8 @@ Start a Project
         <!-- Jewellery -->
         <a href="https://jewellery-premium2.vercel.app/" target="_blank" rel="noopener" class="hotspot jewellery" aria-label="Jewellery Website">
 
+            <span class="tap-dot"></span>
+
             <div class="district-card">
 
                 <span>Premium Jewellery</span>
@@ -174,21 +210,7 @@ Start a Project
 
     </div>
 
-    <div class="mobile-district-list">
-
-        <a href="https://demo-polyclinic.vercel.app/" target="_blank" rel="noopener">🏥 Medical</a>
-
-        <a href="https://ultra-premium-salon-website.vercel.app/" target="_blank" rel="noopener">✂️ Salon</a>
-
-        <a href="https://cafe-premium2.vercel.app/" target="_blank" rel="noopener">🍽 Restaurant</a>
-
-        <a href="https://education-institute-demo.vercel.app/" target="_blank" rel="noopener">🎓 Education</a>
-
-        <a href="https://demo-for-realestate.vercel.app/" target="_blank" rel="noopener">🏢 Real Estate</a>
-
-        <a href="https://jewellery-premium2.vercel.app/" target="_blank" rel="noopener">💍 Jewellery</a>
-
-    </div>
+    <p class="district-hint">Tap a building to view its live demo</p>
 
 </div>
 

@@ -31,6 +31,8 @@ aria-label="Open navigation menu">
 
 <a href="#process">Process</a>
 
+<a href="#pricing">Pricing</a>
+
 <a href="#contact" class="nav-cta">Start Project</a>
 
 </nav>

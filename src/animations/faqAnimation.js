@@ -1,28 +1,25 @@
 import { gsap } from "gsap";
 
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+export default function faqAnimation() {
 
-gsap.registerPlugin(ScrollTrigger);
+    const items = document.querySelectorAll(".faq details");
 
-export default function faqAnimation(){
+    if (!items.length) return;
 
-    gsap.from(".faq details",{
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
 
-        y:40,
+            gsap.from(entry.target, {
+                y: 40,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power3.out"
+            });
 
-        opacity:0,
+            obs.unobserve(entry.target);
+        });
+    }, { threshold: 0.2 });
 
-        stagger:.12,
-
-        duration:.8,
-
-        ease:"power3.out",
-
-        scrollTrigger:{
-            trigger:".faq",
-            start:"top 75%"
-        }
-
-    });
-
+    items.forEach((item) => observer.observe(item));
 }
